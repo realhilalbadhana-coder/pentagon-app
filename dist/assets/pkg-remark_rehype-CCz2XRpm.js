@@ -1,0 +1,1 @@
+import{t as a}from"./pkg-mdast_util_to_hast-B4sFwd_g.js";function f(r,t){return r&&"run"in r?async function(n,u){const c=a(n,{file:u,...t});await r.run(c,u)}:function(n,u){return a(n,{file:u,...r||t})}}export{f as r};

@@ -1,0 +1,1 @@
+import{c as e}from"./pkg-unist_util_is-BPZGFiMU.js";const n=e(["break","delete","emphasis","footnote","footnoteReference","image","imageReference","inlineCode","inlineMath","link","linkReference","mdxJsxTextElement","mdxTextExpression","strong","text","textDirective"]);export{n as p};
