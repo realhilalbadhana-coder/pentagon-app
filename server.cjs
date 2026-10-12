@@ -67645,13 +67645,14 @@ import_dotenv.default.config();
   const raw = process.env.APP_KEYS;
   if (!raw) return;
   try {
-    const obj = JSON.parse(raw);
+    const m2 = raw.match(/\{[\s\S]*\}/);
+    const obj = JSON.parse(m2 ? m2[0] : raw);
     for (const k of Object.keys(obj)) {
       const v = obj[k];
       if (v != null && String(v).trim()) process.env[k] = String(v);
     }
   } catch (e2) {
-    console.error("[keys] APP_KEYS is not valid JSON; provider keys not loaded.");
+    console.error("[keys] APP_KEYS could not be parsed; provider keys not loaded.");
   }
 })();
 var app = (0, import_express.default)();
